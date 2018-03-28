@@ -409,6 +409,8 @@ namespace OpcPublisher
                     PublisherOpcApplicationConfiguration.CertificateValidator.CertificateValidation += new CertificateValidationEventHandler(CertificateValidator_Default);
                 }
 
+#region ServerDef
+
                 // start our server interface
                 try
                 {
@@ -423,6 +425,7 @@ namespace OpcPublisher
                     Trace("exiting...");
                     return;
                 }
+#endregion
 
                 // read telemetry configuration file
                 PublisherTelemetryConfiguration.Init();
